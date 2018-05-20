@@ -20,7 +20,7 @@ public class PRWindow : EditorWindow
 		// Get existing open window or if none, make a new one:
 		PRWindow window = (PRWindow)EditorWindow.GetWindow (typeof (PRWindow));
 		window.position = new Rect(100,100,300,500);
-		window.title = "Packrat";
+        window.titleContent.text = "Packrat";
 		window.Show(); 
 	}
 
@@ -505,7 +505,7 @@ public class PRViewAtlasWindow : EditorWindow
 		// Get existing open window or if none, make a new one:
 		PRViewAtlasWindow window = (PRViewAtlasWindow)EditorWindow.GetWindow(typeof (PRViewAtlasWindow));
 		window.position = new Rect(Screen.width/2,Screen.height/2,512,512);
-		window.title = "Viewing " + Path.GetFileNameWithoutExtension(link.atlasFilePath);
+        window.titleContent.text = "Viewing " + Path.GetFileNameWithoutExtension(link.atlasFilePath);
 		window.ShowUtility(); 
 		//window.maximized = true;
 		window.Setup(link); 
